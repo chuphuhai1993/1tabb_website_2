@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <>
             <header className="sticky top-4 z-50 px-4">
                 <div className="max-w-7xl mx-auto px-6"> 
-                    <div className="h-16 flex items-center justify-between glass-panel !rounded-[16px] pr-4 pl-6 border-black/10 dark:border-white/10 backdrop-blur-xl transition-all duration-300 shadow-lg">
+                    <div className="h-16 flex items-center justify-between glass-panel !rounded-full pr-4 pl-6 border-black/10 dark:border-white/10 backdrop-blur-xl transition-all duration-300 shadow-lg">
                         <div className="flex items-center gap-12">
                             <a className="flex items-center gap-2" href="#">
                                 <img src={logoBlack} alt="1Tabb" className="h-4 w-auto dark:hidden" />
