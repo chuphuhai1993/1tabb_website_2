@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
 
     return (
         <section id="contact" className="py-24 px-6 max-w-4xl mx-auto">
-            <div className="glass-panel p-8 md:p-16 border-white/10 shadow-lg dark:shadow-none">
+            <div className="glass-panel p-8 md:p-16 border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_12px_32px_rgba(0,0,0,0.25)]">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif text-black/90 dark:text-white mb-4 ">{t.contact.title}</h2>
                     <p className="text-black/50 text-black/50 dark:text-white/50 text-sm">{t.contact.subtitle}</p>

@@ -22,7 +22,7 @@ const pillarsConfig = [
 ] as const;
 
 const PillarCard: React.FC<{ pillar: Pillar }> = ({ pillar }) => (
-    <div className="glass-card p-10 rounded-[32px] group relative overflow-hidden">
+    <div className="glass-card p-10 rounded-[32px] group relative overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_12px_32px_rgba(0,0,0,0.25)]">
         <div className="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity">
             <span className={`material-symbols-outlined text-8xl text-${pillar.color}`}>{pillar.icon}</span>
         </div>
@@ -47,7 +47,7 @@ const Pillars: React.FC = () => {
     return (
         <section className="py-12 px-6 max-w-7xl mx-auto">
             <div className="text-center mb-16">
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">{t.pillars.label}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 ">{t.pillars.label}</span>
                 <h2 className="text-3xl font-serif mt-4 text-black/90 dark:text-white">{t.pillars.title}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

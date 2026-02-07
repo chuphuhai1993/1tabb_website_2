@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <>
             <header className="sticky top-4 z-50 px-4">
                 <div className="max-w-7xl mx-auto px-6"> 
-                    <div className="h-16 flex items-center justify-between glass-panel !rounded-full pr-4 pl-6 border-black/10 dark:border-white/10 backdrop-blur-xl transition-all duration-300 shadow-lg">
+                    <div className="h-16 flex items-center justify-between glass-panel !rounded-full pr-4 pl-6 border-black/10 dark:border-white/10 backdrop-blur-xl transition-all duration-300 shadow-[0_12px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_12px_32px_rgba(0,0,0,0.25)]">
                         <div className="flex items-center gap-12">
                             <a className="flex items-center gap-2" href="#">
                                 <img src={logoBlack} alt="1Tabb" className="h-4 w-auto dark:hidden" />
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                             >
                                 <img src={language === 'en' ? iconEn : iconVi} alt={language} className="w-5 h-5 object-contain" />
                             </button>
-                            <button className="primary-glow-btn px-5 py-2 rounded-full font-mono text-[10px] font-bold uppercase backdrop-blur-md">
+                            <button className="primary-glow-btn px-5 py-2 rounded-full font-mono text-[10px] !text-black dark:!text-[var(--primary)] font-bold uppercase backdrop-blur-md">
                                 {t.header.getStarted}
                             </button>
                         </div>

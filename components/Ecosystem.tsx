@@ -15,9 +15,9 @@ import icon9 from '../assets/images/icon_9.png';
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
     <div className="glass-card p-8 rounded-[32px] flex flex-col h-full group">
         <div className="flex justify-between items-start mb-8">
-            <div className="w-16 h-16 icon-glass rounded-[20px] transition-transform duration-300 flex items-center justify-center">
+            <div className="transition-transform duration-300 flex items-center justify-center">
                 {product.icon.includes('/') ? (
-                    <img src={product.icon} alt={product.title} className="w-8 h-8 object-contain" />
+                    <img src={product.icon} alt={product.title} className="w-16 h-16 object-contain" />
                 ) : (
                     <span className="material-symbols-outlined text-3xl text-black/90 dark:text-white">{product.icon}</span>
                 )}
@@ -86,7 +86,7 @@ const Ecosystem: React.FC = () => {
     return (
         <section id="ecosystem" className="py-32 px-6 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-6">
-                <div>
+                <div className="">
                     <h2 className="text-4xl md:text-5xl font-serif text-black/90 dark:text-white mb-4">{t.products.label}</h2>
                     <p className="text-black/50 dark:text-white/50 max-w-md">{t.products.description}</p>
                 </div>
