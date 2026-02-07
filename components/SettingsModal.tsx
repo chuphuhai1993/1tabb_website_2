@@ -24,7 +24,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
             <div 
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+                className="absolute inset-0  bg-white/60 dark:bg-black/60 backdrop-blur-sm transition-opacity"
                 onClick={onClose}
             ></div>
             <div className="relative w-full max-w-md bg-white dark:bg-[#0a0a0a] border border-black/10 dark:border-white/10 rounded-[32px] p-8 shadow-2xl transition-colors duration-300">
