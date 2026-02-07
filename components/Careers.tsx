@@ -32,7 +32,7 @@ const JobListing: React.FC<{ job: Job }> = ({ job }) => (
             <h4 className="text-white font-medium text-sm">{job.title}</h4>
             <p className="text-white/40 text-xs">{job.details}</p>
         </div>
-        <span className="material-symbols-outlined text-white/20 ml-auto group-hover:text-white transition-colors">arrow_forward</span>
+        <span className="material-symbols-outlined text-white/20 text-sm ml-auto group-hover:text-white transition-colors">arrow_forward</span>
     </div>
 );
 
@@ -42,7 +42,7 @@ const Careers: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-16">
                 <div>
                     <span className="font-mono text-primary text-xs uppercase tracking-[0.2em] mb-4 block">Careers</span>
-                    <h2 className="text-5xl font-serif font-light text-white mb-6">Join Our Journey</h2>
+                    <h2 className="text-5xl font-serif text-white mb-6">Join Our Journey</h2>
                     <p className="text-white/60 mb-8 leading-relaxed max-w-md">
                         We are looking for visionaries, craftsmen, and dreamers who want to shape the future of digital interaction.
                     </p>

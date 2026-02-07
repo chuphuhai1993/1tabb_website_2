@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
         <section className="py-24 px-6 max-w-4xl mx-auto">
             <div className="glass-panel p-8 md:p-16 border-white/10">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-serif font-light text-white mb-4">Let's build something extraordinary</h2>
+                    <h2 className="text-3xl font-serif text-white mb-4">Let's build something extraordinary</h2>
                     <p className="text-white/50 text-sm">Partnership inquiries? We'd love to hear from you.</p>
                 </div>
                 <form className="space-y-6">

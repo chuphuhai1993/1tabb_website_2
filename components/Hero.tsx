@@ -9,9 +9,9 @@ const Hero: React.FC = () => {
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">Redefining Digital Experience</span>
                 </div>
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-light italic leading-[0.9] text-white text-glow mb-10 tracking-tight">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif italic leading-[0.9] text-white/90 text-glow mb-10 tracking-tight">
                     Human-centric <br />
-                    <span className="not-italic font-sans font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Innovation.</span>
+                    <span className="not-italic font-sans font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-white animate-gradient-x">Innovation.</span>
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 font-light leading-relaxed mb-12">
                     We craft digital ecosystems where technology dissolves into intuition, creating seamless bridges between human intent and digital action.

@@ -22,10 +22,10 @@ const Mission: React.FC = () => {
             <div className="px-6 max-w-5xl mx-auto">
                 <div className="glass-panel px-12 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-                    <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
+                    <div className="grid md:grid-cols-2 gap-6 items-center relative z-10">
                         <div>
                             <span className="font-mono text-primary text-xs uppercase tracking-[0.2em] mb-4 block">Our Mission</span>
-                            <h2 className="text-4xl md:text-5xl font-serif font-light text-white leading-tight mb-8">
+                            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight mb-8">
                                 Designing the invisible interface.
                             </h2>
                             <p className="text-white/60 leading-relaxed mb-8">
@@ -58,82 +58,82 @@ const Mission: React.FC = () => {
                         </div>
                         <div className="relative flex items-center justify-center group h-[500px] overflow-hidden">
                             {/* Background Scrolling Icons */}
-                            <div className="absolute inset-0 flex flex-row justify-center gap-5 pointer-events-none">
+                            <div className="absolute inset-0 flex flex-row justify-center gap-7 pointer-events-none">
                                 {/* Column 1: Up */}
                                 <div className="flex flex-col h-max animate-marquee-up [animation-duration:100s!important]">
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon1} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon2} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon3} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
                                     </div>
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon1} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon2} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon3} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
                                     </div>
                                 </div>
 
                                 {/* Column 2: Down */}
                                 <div className="flex flex-col h-max animate-marquee-down [animation-duration:100s!important]">
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon3} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon2} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon1} className="w-24 h-24 object-contain" alt="" />
                                     </div>
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
                                     </div>
                                 </div> 
 
                                 {/* Column 3: Up */}
                                 <div className="flex flex-col h-max animate-marquee-up [animation-duration:100s!important]">
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
                                     </div>
-                                    <div className="flex flex-col gap-5 py-3">
-                                        <img src={icon2} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon4} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon6} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon8} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon1} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon3} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon5} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon7} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
-                                        <img src={icon9} className="w-[7.5rem] h-[7.5rem] object-contain" alt="" />
+                                    <div className="flex flex-col gap-7 py-3">
+                                        <img src={icon9} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon8} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon7} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon6} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon5} className="w-24 h-24 object-contain" alt="" />
+                                        <img src={icon4} className="w-24 h-24 object-contain" alt="" />
                                     </div>
                                 </div>
                             </div>
