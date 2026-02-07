@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
                     {t.hero.subtitle}
                 </p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <button className="bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-medium hover:scale-[1.05] transition-all duration-300 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-5px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_0_60px_-5px_rgba(255,255,255,0.3)]">
+                    <button className="bg-black text-white dark:bg-white dark:text-black px-8 py-4 h-16 rounded-full font-medium hover:scale-[1.05] transition-all duration-300 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-5px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_0_60px_-5px_rgba(255,255,255,0.3)]">
                         {t.hero.cta}
                     </button>
-                    <button className="glass-button px-8 py-4 rounded-full font-medium text-black dark:text-white !bg-white/90 hover:bg-white dark:hover:bg-white/10 hover:scale-[1.05] transition-all duration-300 flex items-center gap-2 group hover:shadow-[0_0_60px_-5px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_60px_-5px_rgba(255,255,255,0.2)]">
+                    <button className="glass-button px-8 py-4 h-16 rounded-full font-medium text-black dark:text-white hover:bg-white !dark:hover:bg-white/10 hover:scale-[1.05] transition-all duration-300 flex items-center gap-2 group hover:shadow-[0_0_60px_-5px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_60px_-5px_rgba(255,255,255,0.2)]">
                         {t.hero.watchFilm} <span className="material-symbols-outlined text-lg">play_circle</span>
                     </button>
                 </div>

@@ -16,7 +16,7 @@ const TrustedBy: React.FC = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="py-20 border-t border-b border-white/5 bg-white/[0.05]">
+        <section className="py-20 border-t border-b border-white/5 bg-white/[0.02]">
             <div className="max-w-7xl mx-auto px-6">
                 <p className="text-center font-mono text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 mb-12">{t.trustedBy}</p>
                 <div className="logo-slider overflow-hidden flex relative w-full">
