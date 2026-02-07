@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -15,16 +15,43 @@
     <style type="text/tailwindcss">
         @layer base {
             body {
-                @apply text-white/90 selection:bg-[#D4FF5B]/30 antialiased overflow-x-hidden min-h-screen font-sans;
+                @apply text-[var(--text-primary)] selection:bg-[#D4FF5B]/30 antialiased overflow-x-hidden min-h-screen font-sans bg-[var(--bg-primary)];
             }
         }
         :root {
+            
+            /* Light Mode Defaults */
+            --primary: #99cc0a;
+            --bg-primary: #f8f9fa;
+            --text-primary: #1a1d14;
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --glass-border: rgba(255, 255, 255, 1);
+            --glass-glow: rgba(0, 0, 0, 0.1);
+            --glass-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --scrollbar-track: #f0f0f0;
+            --scrollbar-thumb: #ccc;
+            --scrollbar-thumb-hover: #bbb;
+            --form-bg: rgba(0,0,0,0.03);
+            --form-border: rgba(0,0,0,0.1);
+            --bg-icon-start: rgba(255, 255, 255, 0.08);
+            --bg-icon-end: rgba(255, 255, 255, 0.02);
+        }
+        .dark {
+            /* Dark Mode Overrides */
             --primary: #D4FF5B;
-            --primary-dark: #424e23;
-            --primary-dark-2: #1a1d14;
-            --glass-bg: rgba(255, 255, 255, 0.1);
+            --bg-primary: #050505;
+            --text-primary: rgba(255, 255, 255, 0.9);
+            --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
-            --glass-glow: rgba(255, 255, 255, 0.08);
+            --glass-glow: rgba(255, 255, 255, 0);
+            --glass-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            --scrollbar-track: #050505;
+            --scrollbar-thumb: #333;
+            --scrollbar-thumb-hover: #444;
+            --form-bg: rgba(255,255,255,0.03);
+            --form-border: rgba(255,255,255,0.1);
+            --bg-icon-start: rgba(255, 255, 255, 0.08);
+            --bg-icon-end: rgba(255, 255, 255, 0.02);
         }
         .bg-blobs {
             position: fixed;
@@ -34,9 +61,10 @@
             height: 150vmax;
             z-index: -1;
             overflow: hidden;
-            background: #050505;
+            background: var(--bg-primary);
             transform: translate(-50%, -50%);
             animation: rotate-bg 30s linear infinite;
+            transition: background-color 0.3s ease;
         }
         @keyframes rotate-bg {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
@@ -71,38 +99,38 @@
             background: #72bc18;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--glass-bg);
             backdrop-filter: blur(40px);
             -webkit-backdrop-filter: blur(30px);
             border: 1px solid var(--glass-border);
-            /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 0 0 1px rgba(255,255,255,0.03); */
             border-radius: 32px;
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--glass-bg);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--glass-border);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: var(--glass-shadow);
         }
         .glass-card:hover {
             border: 1px solid rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
-            /* box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02); */
         }
         .glass-button {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--glass-bg);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
             transition: all 0.3s ease;
         }
         .glass-button:hover {
+            box-shadow: 0 0 40px var(--glass-glow);
+        }
+        .dark .glass-button:hover {
             background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
         }
         .primary-glow-btn {
             background: var(--primary);
-            color: var(--primary-dark-2);
+            color: var(--bg-primary);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -114,13 +142,15 @@
         .text-glow {
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
         }
+        .dark .text-glow {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        }
         .icon-glass {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
-            /* border: 1px solid rgba(255,255,255,0.1); */
-            /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
+            background: linear-gradient(135deg, var(--bg-icon-start) 0%, var(--bg-icon-end) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 10px var(--glass-glow);
         }
         .nav-link {
             position: relative;
@@ -144,23 +174,23 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #050505; 
+            background: var(--scrollbar-track); 
         }
         ::-webkit-scrollbar-thumb {
-            background: #333; 
+            background: var(--scrollbar-thumb); 
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #444; 
+            background: var(--scrollbar-thumb-hover); 
         }
         .logo-slider {
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
         .form-input {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--form-bg);
+            border: 1px solid var(--form-border);
             border-radius: 12px;
-            color: white;
+            color: inherit;
             transition: all 0.3s;
         }
         .form-input:focus {
@@ -224,6 +254,7 @@
     </style>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {

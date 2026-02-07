@@ -19,19 +19,19 @@ const Mission: React.FC = () => {
 
     return (
         <section className="py-32 px-6 relative">
-            <div className="px-6 max-w-5xl mx-auto">
-                <div className="glass-panel px-12 relative overflow-hidden">
+            <div className="px-6 max-w-5xl mx-auto"> 
+                <div className="glass-panel px-12 relative overflow-hidden shadow-[0_0_10px_var(--glass-shadow)]">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
                     <div className="grid md:grid-cols-2 gap-6 items-center relative z-10">
                         <div>
-                            <span className="font-mono text-primary text-xs uppercase tracking-[0.2em] mb-4 block">Our Mission</span>
-                            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight mb-8">
+                            <span className="font-mono text-[var(--primary)] text-xs uppercase tracking-[0.2em] mb-4 block">Our Mission</span>
+                            <h2 className="text-4xl md:text-5xl font-serif text-black dark:text-white leading-tight mb-8 transition-colors duration-300">
                                 Designing the invisible interface.
                             </h2>
-                            <p className="text-white/60 leading-relaxed mb-8">
+                            <p className="text-black/60 dark:text-white/60 leading-relaxed mb-8 transition-colors duration-300">
                                 At 1Tabb, we believe the best technology is the kind you don't notice. Our mission is to strip away the complexity of modern software, leaving only pure utility and delight.
                             </p>
-                            <div className="flex gap-12 border-t border-white/10 pt-8">
+                            <div className="flex gap-12 border-t border-black/10 dark:border-white/10 pt-8 transition-colors duration-300">
                                 {stats.map((stat) => {
                                     const match = stat.value.match(/^([\d.]+)(.*)$/);
                                     const end = match ? parseFloat(match[1]) : 0;
@@ -40,7 +40,7 @@ const Mission: React.FC = () => {
 
                                     return (
                                         <div key={stat.label}>
-                                            <div className="text-3xl font-bold text-white mb-1">
+                                            <div className="text-3xl font-bold text-black dark:text-white mb-1 transition-colors duration-300">
                                                 <CountUp
                                                     end={end}
                                                     duration={2.5}
@@ -50,7 +50,7 @@ const Mission: React.FC = () => {
                                                     scrollSpyOnce
                                                 />
                                             </div>
-                                            <div className="text-xs text-white/40 uppercase tracking-wider font-mono">{stat.label}</div>
+                                            <div className="text-xs text-black/40 dark:text-white/40 uppercase tracking-wider font-mono transition-colors duration-300">{stat.label}</div>
                                         </div>
                                     );
                                 })}

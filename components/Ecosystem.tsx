@@ -6,7 +6,7 @@ const productsData: Product[] = [
     {
         icon: 'cleaning_services',
         category: 'UTILITY',
-        categoryColor: 'primary',
+        categoryColor: '[var(--primary)]',
         title: 'CleanMaster Pro',
         description: 'Smart device optimization that learns your usage patterns to keep performance peak.',
     },
@@ -51,19 +51,19 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
     <div className="glass-card p-8 rounded-[32px] flex flex-col h-full group">
         <div className="flex justify-between items-start mb-8">
             <div className="w-16 h-16 icon-glass rounded-[20px] transition-transform duration-300">
-                <span className="material-symbols-outlined text-3xl text-white">{product.icon}</span>
+                <span className="material-symbols-outlined text-3xl text-black/90 dark:text-white">{product.icon}</span>
             </div>
             <span className={`glass-button px-3 py-1 rounded-full font-mono text-[10px] font-medium text-${product.categoryColor} border-${product.categoryColor}/20`}>
                 {product.category}
             </span>
         </div>
-        <h3 className={`text-xl font-bold mb-3 text-white transition-colors`}>{product.title}</h3>
-        <p className="text-white/50 text-sm leading-relaxed mb-8 flex-grow">{product.description}</p>
+        <h3 className={`text-xl font-bold mb-3 text-black/90 dark:text-white transition-colors`}>{product.title}</h3>
+        <p className="text-black/50 dark:text-white/50 text-sm leading-relaxed mb-8 flex-grow">{product.description}</p>
         <div className="flex gap-3 mt-auto">
-            <button className="w-10 h-10 rounded-full glass-button flex items-center justify-center hover:text-white hover:bg-white/20" title="App Store">
+            <button className="w-10 h-10 rounded-full glass-button flex items-center justify-center hover:bg-white/20" title="App Store">
                 <span className="material-symbols-outlined text-lg">ios</span>
             </button>
-            <button className="w-10 h-10 rounded-full glass-button flex items-center justify-center hover:text-white hover:bg-white/20" title="Google Play">
+            <button className="w-10 h-10 rounded-full glass-button flex items-center justify-center hover:bg-white/20" title="Google Play">
                 <span className="material-symbols-outlined text-lg">robot_2</span>
             </button>
         </div>
@@ -75,10 +75,10 @@ const Ecosystem: React.FC = () => {
         <section className="py-32 px-6 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-6">
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Product Ecosystem</h2>
-                    <p className="text-white/50 max-w-md">A suite of interconnected applications designed to elevate your daily digital interactions.</p>
+                    <h2 className="text-4xl md:text-5xl font-serif text-black/90 dark:text-white mb-4">Product Ecosystem</h2>
+                    <p className="text-black/50 dark:text-white/50 max-w-md">A suite of interconnected applications designed to elevate your daily digital interactions.</p>
                 </div>
-                <button className="glass-button px-6 py-3 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:bg-white hover:text-black transition-colors">
+                <button className="glass-button px-6 py-3 rounded-full text-sm font-medium text-black/90 dark:text-white flex items-center gap-2 hover:bg-white hover:text-black transition-colors">
                     View All Apps <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
             </div>
