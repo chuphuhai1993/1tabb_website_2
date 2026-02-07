@@ -33,7 +33,6 @@ export const translations = {
         },
         products: {
             label: 'Ecosystem',
-            title: 'Tools for tomorrow.',
             description: 'A suite of interconnected applications designed to amplify human potential.',
             items: {
                 superNeon: {

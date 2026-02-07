@@ -23,7 +23,7 @@ const Mission: React.FC = () => {
     return (
         <section id="mission" className="py-32 px-6 relative">
             <div className="px-6 max-w-5xl mx-auto"> 
-                <div className="glass-panel px-12 relative overflow-hidden shadow-lg dark:shadow-none">
+                <div className="glass-panel px-12 relative overflow-hidden shadow-lg">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
                     <div className="grid md:grid-cols-2 gap-6 items-center relative z-10">
                         <div>

@@ -90,9 +90,6 @@ const Ecosystem: React.FC = () => {
                     <h2 className="text-4xl md:text-5xl font-serif text-black/90 dark:text-white mb-4">{t.products.label}</h2>
                     <p className="text-black/50 dark:text-white/50 max-w-md">{t.products.description}</p>
                 </div>
-                <button className="glass-button px-6 py-3 rounded-full text-sm font-medium text-black/90 dark:text-white flex items-center gap-2 hover:bg-white hover:text-black transition-colors">
-                    {t.products.title} <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {productsData.map((product) => (

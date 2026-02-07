@@ -14,10 +14,9 @@ const App: React.FC = () => {
     return (
         <div className="relative isolate font-sans">
             <div className="bg-blobs">
-                <div className="blob blob-pink"></div>
-                <div className="blob blob-violet"></div>
-                <div className="blob blob-blue"></div>
+                <div className="blob blob-purple"></div>
                 <div className="blob blob-lime"></div>
+                <div className="blob blob-teal"></div>
             </div>
             <Header />
             <main>
