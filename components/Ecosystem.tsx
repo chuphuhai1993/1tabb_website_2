@@ -17,7 +17,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
         <div className="flex justify-between items-start mb-8">
             <div className="transition-transform duration-300 flex items-center justify-center">
                 {product.icon.includes('/') ? (
-                    <img src={product.icon} alt={product.title} className="w-16 h-16 object-contain" />
+                    <img src={product.icon} alt={product.title} className="w-20 h-20 object-contain" />
                 ) : (
                     <span className="material-symbols-outlined text-3xl text-black/90 dark:text-white">{product.icon}</span>
                 )}
