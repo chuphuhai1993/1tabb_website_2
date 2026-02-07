@@ -41,7 +41,7 @@ const Careers: React.FC = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="py-32 px-6 max-w-7xl mx-auto">
+        <section id="careers" className="py-32 px-6 max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
                 <div>
                     <span className="font-mono text-[var(--primary)] text-xs uppercase tracking-[0.2em] mb-4 block">{t.careers.label}</span>

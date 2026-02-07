@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="py-24 px-6 max-w-4xl mx-auto">
+        <section id="contact" className="py-24 px-6 max-w-4xl mx-auto">
             <div className="glass-panel p-8 md:p-16 border-white/10 shadow-lg dark:shadow-none">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif text-black/90 dark:text-white mb-4 ">{t.contact.title}</h2>

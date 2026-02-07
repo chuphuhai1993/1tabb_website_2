@@ -2,6 +2,8 @@ import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../context/translations';
+import enIcon from '../assets/images/en.png';
+import viIcon from '../assets/images/vi.png';
 
 interface SettingsModalProps {
     isOpen: boolean;
@@ -14,9 +16,9 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
 
     if (!isOpen) return null;
 
-    const languages: { id: Language; label: string }[] = [
-        { id: 'en', label: 'English' },
-        { id: 'vi', label: 'Tiếng Việt' },
+    const languages: { id: Language; label: string; icon: string }[] = [
+        { id: 'en', label: 'English', icon: enIcon },
+        { id: 'vi', label: 'Tiếng Việt', icon: viIcon },
     ];
 
     return (
@@ -83,12 +85,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                                 <button
                                     key={lang.id}
                                     onClick={() => setLanguage(lang.id)}
-                                    className={`px-4 py-2.5 rounded-xl border text-sm transition-all ${
+                                    className={`px-4 py-2.5 rounded-xl border text-sm transition-all flex items-center gap-2 ${
                                         language === lang.id
                                         ? 'bg-black/10 dark:bg-white/10 border-black dark:border-white text-black dark:text-white'
                                         : 'bg-black/5 dark:bg-white/5 border-transparent text-black/40 dark:text-white/40 hover:bg-black/10 dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
                                     }`}
                                 >
+                                    <img src={lang.icon} alt={lang.label} className="w-5 h-5 object-contain" />
                                     {lang.label}
                                 </button>
                             ))}

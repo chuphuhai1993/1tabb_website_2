@@ -14,6 +14,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer base {
+            html {
+                scroll-behavior: smooth;
+            }
             body {
                 @apply text-[var(--text-primary)] selection:bg-[#D4FF5B]/30 antialiased overflow-x-hidden min-h-screen font-sans bg-[var(--bg-primary)];
             }

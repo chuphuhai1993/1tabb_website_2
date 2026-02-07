@@ -84,7 +84,7 @@ const Ecosystem: React.FC = () => {
     }));
 
     return (
-        <section className="py-32 px-6 max-w-7xl mx-auto">
+        <section id="ecosystem" className="py-32 px-6 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-6">
                 <div>
                     <h2 className="text-4xl md:text-5xl font-serif text-black/90 dark:text-white mb-4">{t.products.label}</h2>
