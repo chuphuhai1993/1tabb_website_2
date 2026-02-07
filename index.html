@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1Tabb Premium Glassmorphism Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-sans/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply text-white/90 selection:bg-[#D4FF5B]/30 antialiased overflow-x-hidden min-h-screen font-sans;
+            }
+        }
+        :root {
+            --primary: #D4FF5B;
+            --primary-dark: #424e23;
+            --primary-dark-2: #1a1d14;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-glow: rgba(255, 255, 255, 0.08);
+        }
+        .bg-blobs {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 150vmax;
+            height: 150vmax;
+            z-index: -1;
+            overflow: hidden;
+            background: #050505;
+            transform: translate(-50%, -50%);
+            animation: rotate-bg 30s linear infinite;
+        }
+        @keyframes rotate-bg {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        .blob {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            filter: blur(400px);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+        .blob-pink {
+            top: -10%;
+            left: -10%;
+            background: #ff0084;
+        }
+        .blob-violet {
+            top: -10%;
+            right: -10%;
+            background: #5b2be2;
+        }
+        .blob-blue {
+            bottom: -10%;
+            right: -10%;
+            background: #008cff;
+        }
+        .blob-lime {
+            bottom: -10%;
+            left: -10%;
+            background: #72bc18;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 0 0 1px rgba(255,255,255,0.03); */
+            border-radius: 32px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            /* box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02); */
+        }
+        .glass-button {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        }
+        .primary-glow-btn {
+            background: var(--primary);
+            color: var(--primary-dark-2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .primary-glow-btn:hover {
+            background: var(--primary);
+            box-shadow: 0 0 25px var(--primary);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        }
+        .icon-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+            /* border: 1px solid rgba(255,255,255,0.1); */
+            /* box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            box-shadow: 0 0 8px var(--primary);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444; 
+        }
+        .logo-slider {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .form-input {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: white;
+            transition: all 0.3s;
+        }
+        .form-input:focus {
+            background: rgba(255,255,255,0.05);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(212, 255, 91, 0.1);
+            outline: none;
+        }
+        @keyframes float-1 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) translateX(10px) rotate(10deg); }
+        }
+        @keyframes float-2 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) translateX(-10px) rotate(-15deg); }
+        }
+        @keyframes float-3 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            50% { transform: translateY(15px) translateX(5px) rotate(8deg); }
+        }
+        .animate-float-1 { animation: float-1 6s ease-in-out infinite; }
+        .animate-float-2 { animation: float-2 5s ease-in-out infinite; }
+        .animate-float-3 { animation: float-3 7s ease-in-out infinite; }
+        
+        @keyframes marquee-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes marquee-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        @keyframes marquee-down {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+        .animate-marquee-left {
+            animation: marquee-left 30s linear infinite;
+        }
+        .animate-marquee-right {
+            animation: marquee-right 30s linear infinite;
+        }
+        .animate-marquee-up {
+            animation: marquee-up 30s linear infinite;
+        }
+        .animate-marquee-down {
+            animation: marquee-down 30s linear infinite;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4FF5B",
+                        glass: "rgba(255, 255, 255, 0.05)"
+                    },
+                    fontFamily: {
+                        serif: ["Noto Serif Display", "serif"],
+                        mono: ["IBM Plex Mono", "monospace"],
+                        sans: ["Geist Sans", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
