@@ -1,27 +1,25 @@
 
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import { Pillar } from '../types';
 
-const pillarsData: Pillar[] = [
+const pillarsConfig = [
     {
+        id: 'innovation',
         icon: 'lightbulb',
-        title: 'Innovation',
-        description: 'Pushing boundaries with AI-driven solutions that anticipate user needs before they arise.',
         color: '[var(--primary)]',
     },
     {
+        id: 'quality',
         icon: 'diamond',
-        title: 'Quality',
-        description: 'Obsessive attention to detail, pixel-perfect interfaces, and robust architecture.',
         color: 'purple-400',
     },
     {
+        id: 'collaboration',
         icon: 'groups',
-        title: 'Collaboration',
-        description: 'Building bridges between disciplines to create holistic products that matter.',
         color: 'cyan-400',
     },
-];
+] as const;
 
 const PillarCard: React.FC<{ pillar: Pillar }> = ({ pillar }) => (
     <div className="glass-card p-10 rounded-[32px] group relative overflow-hidden">
@@ -37,11 +35,20 @@ const PillarCard: React.FC<{ pillar: Pillar }> = ({ pillar }) => (
 );
 
 const Pillars: React.FC = () => {
+    const { t } = useLanguage();
+
+    const pillarsData: Pillar[] = pillarsConfig.map((config) => ({
+        icon: config.icon,
+        color: config.color,
+        title: t.pillars.items[config.id].title,
+        description: t.pillars.items[config.id].description,
+    }));
+
     return (
         <section className="py-12 px-6 max-w-7xl mx-auto">
             <div className="text-center mb-16">
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Core Values</span>
-                <h2 className="text-3xl font-serif mt-4 text-black/90 dark:text-white">The pillars of our craft</h2>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">{t.pillars.label}</span>
+                <h2 className="text-3xl font-serif mt-4 text-black/90 dark:text-white">{t.pillars.title}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {pillarsData.map((pillar) => (

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const logos = [
     { name: 'TechFlow', className: 'text-xl font-serif text-black/30 dark:text-white/30 italic' },
@@ -12,10 +13,12 @@ const logos = [
 ];
 
 const TrustedBy: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="py-20 border-t border-b border-white/5 bg-white/[0.05]">
             <div className="max-w-7xl mx-auto px-6">
-                <p className="text-center font-mono text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 mb-12">Trusted by industry leaders</p>
+                <p className="text-center font-mono text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 mb-12">{t.trustedBy}</p>
                 <div className="logo-slider overflow-hidden flex relative w-full">
                     <div className="flex gap-16 items-center animate-[scroll_40s_linear_infinite] min-w-full justify-around whitespace-nowrap px-4">
                         {[...logos, ...logos].map((logo, index) => (

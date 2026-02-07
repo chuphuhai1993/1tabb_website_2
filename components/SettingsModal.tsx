@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
+import { Language } from '../context/translations';
 
 interface SettingsModalProps {
     isOpen: boolean;
@@ -8,11 +10,11 @@ interface SettingsModalProps {
 
 const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
     const { theme, setTheme } = useTheme();
-    const [language, setLanguage] = useState('English');
+    const { language, setLanguage, t } = useLanguage();
 
     if (!isOpen) return null;
 
-    const languages = [
+    const languages: { id: Language; label: string }[] = [
         { id: 'en', label: 'English' },
         { id: 'vi', label: 'Tiếng Việt' },
     ];
@@ -28,14 +30,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                 <div className="w-12 h-1 bg-black/10 dark:bg-white/10 rounded-full mx-auto mb-8"></div>
 
                 <div className="text-center mb-8">
-                    <h2 className="text-3xl font-serif text-black dark:text-white mb-2">Personalize Your Journey</h2>
-                    <p className="text-black/60 dark:text-white/40 text-sm">Customize your 1Tabb experience</p>
+                    <h2 className="text-3xl font-serif text-black dark:text-white mb-2">{t.settings.title}</h2>
+                    <p className="text-black/60 dark:text-white/40 text-sm">{t.settings.subtitle}</p>
                 </div>
 
                 <div className="space-y-6">
                     {/* Appearance */}
                     <div>
-                        <h3 className="text-xs font-mono font-bold text-black/40 dark:text-white/40 uppercase tracking-widest mb-4">Appearance</h3>
+                        <h3 className="text-xs font-mono font-bold text-black/40 dark:text-white/40 uppercase tracking-widest mb-4">{t.settings.appearance}</h3>
                         <div className="grid grid-cols-3 gap-3">
                             <button 
                                 onClick={() => setTheme('light')}
@@ -46,7 +48,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                                 }`}
                             >
                                 <span className="material-symbols-outlined">light_mode</span>
-                                <span className="text-xs font-medium">Light</span>
+                                <span className="text-xs font-medium">{t.settings.themes.light}</span>
                             </button>
                             <button 
                                 onClick={() => setTheme('dark')}
@@ -57,7 +59,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                                 }`}
                             >
                                 <span className="material-symbols-outlined">dark_mode</span>
-                                <span className="text-xs font-medium">Dark</span>
+                                <span className="text-xs font-medium">{t.settings.themes.dark}</span>
                             </button>
                             <button 
                                 onClick={() => setTheme('system')}
@@ -68,21 +70,21 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                                 }`}
                             >
                                 <span className="material-symbols-outlined">settings_brightness</span>
-                                <span className="text-xs font-medium">System</span>
+                                <span className="text-xs font-medium">{t.settings.themes.system}</span>
                             </button>
                         </div>
                     </div>
 
                     {/* Language */}
                     <div>
-                        <h3 className="text-xs font-mono font-bold text-black/40 dark:text-white/40 uppercase tracking-widest mb-4">Language</h3>
+                        <h3 className="text-xs font-mono font-bold text-black/40 dark:text-white/40 uppercase tracking-widest mb-4">{t.settings.language}</h3>
                         <div className="flex flex-wrap gap-3">
                             {languages.map((lang) => (
                                 <button
                                     key={lang.id}
-                                    onClick={() => setLanguage(lang.label)}
+                                    onClick={() => setLanguage(lang.id)}
                                     className={`px-4 py-2.5 rounded-xl border text-sm transition-all ${
-                                        language === lang.label
+                                        language === lang.id
                                         ? 'bg-black/10 dark:bg-white/10 border-black dark:border-white text-black dark:text-white'
                                         : 'bg-black/5 dark:bg-white/5 border-transparent text-black/40 dark:text-white/40 hover:bg-black/10 dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
                                     }`}
@@ -99,13 +101,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
                         onClick={onClose}
                         className="w-full bg-[var(--primary)] text-[var(--bg-primary)] font-bold py-4 rounded-xl hover:shadow-[0_0_20px_rgba(212,255,91,0.4)] transition-all tracking-wide text-sm"
                     >
-                        Continue
+                        {t.settings.save}
                     </button>
                     <button 
                         onClick={onClose}
                         className="w-full text-black/20 dark:text-white/20 hover:text-black dark:hover:text-white transition-colors text-sm"
                     >
-                        Skip for now
+                        {t.settings.skip}
                     </button>
                 </div>
             </div>
