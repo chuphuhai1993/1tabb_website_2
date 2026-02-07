@@ -1,5 +1,7 @@
 
 import React from 'react';
+import logo from '../assets/images/1tabb_logo_primary.svg';
+import logoBlack from '../assets/images/1tabb_logo_black.svg';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -23,9 +25,9 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <div className="md:col-span-1 space-y-6">
-                        <a className="font-mono text-2xl font-bold tracking-tighter text-black/50 dark:text-white flex items-center gap-2" href="#">
-                            <div className="w-3 h-3 bg-primary rounded-full"></div>
-                            1Tabb
+                        <a className="flex items-center gap-2" href="#">
+                            <img src={logoBlack} alt="1Tabb" className="h-6 w-auto dark:hidden" />
+                            <img src={logo} alt="1Tabb" className="h-6 w-auto hidden dark:block" />
                         </a>
                         <p className="text-sm text-black/50 dark:text-white/40 leading-relaxed">
                             {t.footer.description}
