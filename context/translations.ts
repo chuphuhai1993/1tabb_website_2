@@ -38,32 +38,32 @@ export const translations = {
                 superNeon: {
                     category: 'UTILITY',
                     title: 'Super Neon',
-                    description: 'Smart device optimization that learns your usage patterns to keep performance peak.'
+                    description: 'Light up your message with vibrant Neon vibes.'
                 },
                 oneZip: {
                     category: 'BUSINESS',
                     title: 'One Zip',
-                    description: 'Immersive retro-style adventure with touch-optimized combat mechanics.'
+                    description: 'Simplifying file management with powerful compression.'
                 },
                 collage: {
                     category: 'CREATIVE',
-                    title: 'Colalge',
-                    description: 'AI-powered artistic photo editor that transforms moments into masterpieces.'
+                    title: 'Collage',
+                    description: 'Unleash your creativity. Tell your story, one collage at a time.'
                 },
                 runTracker: {
                     category: 'HEALTH',
                     title: 'Run Tracker',
-                    description: 'Mental health and heart rate monitoring with deep biometric analysis.'
+                    description: 'Every step counts. Trace your journey, reach your peak.'
                 },
                 pdf: {
                     category: 'BUSINESS',
                     title: 'PDF',
-                    description: 'Learn languages naturally through real conversations with AI voice assistants.'
+                    description: 'Turn your world into digital documents. Scan, read, and sign anywhere.'
                 },
                 arDraw: {
                     category: 'GAMING',
                     title: 'AR Draw',
-                    description: 'Intelligent personal finance management with automated categorization.'
+                    description: 'Create your own virtual world with AR Draw. Draw, paint, and explore in a whole new way.'
                 }
             }
         },
@@ -154,19 +154,19 @@ export const translations = {
             getStarted: 'Bắt đầu ngay'
         },
         hero: {
-            label: 'Tái định nghĩa Trải nghiệm Kỹ thuật số',
+            label: 'Tái định nghĩa Trải nghiệm số',
             title: {
-                prefix: 'Đổi mới',
-                highlight: 'Vị nhân sinh.'
+                prefix: 'Đổi mới sáng tạo',
+                highlight: 'Lấy người dùng làm trung tâm.'
             },
-            subtitle: 'Tiên phong thế hệ trải nghiệm kỹ thuật số tiếp theo thông qua thiết kế trực quan và công nghệ tiên tiến.',
+            subtitle: 'Tiên phong kiến tạo thế hệ trải nghiệm số bằng thiết kế trực quan và công nghệ đột phá.',
             cta: 'Khám phá Hệ sinh thái',
-            watchFilm: 'Xem phim giới thiệu'
+            watchFilm: 'Xem video giới thiệu'
         },
         mission: {
             label: 'Sứ mệnh',
-            title: 'Thiết kế giao diện vô hình.',
-            description: 'Tại 1Tabb, chúng tôi tin rằng công nghệ tốt nhất là công nghệ bạn không nhận thấy. Sứ mệnh của chúng tôi là loại bỏ sự phức tạp của phần mềm hiện đại, chỉ để lại tiện ích thuần túy và niềm vui.',
+            title: 'Kiến tạo trải nghiệm không điểm chạm.',
+            description: 'Tại 1Tabb, chúng tôi tin công nghệ tốt nhất là thứ len lỏi vào cuộc sống một cách tự nhiên nhất. Chúng tôi mang sứ mệnh lược bỏ những phức tạp rườm rà, để mang đến cho bạn một công cụ thực dụng, tinh giản và đầy cảm hứng.',
             stats: {
                 users: 'Người dùng',
                 awards: 'Giải thưởng',
@@ -176,44 +176,44 @@ export const translations = {
         products: {
             label: 'Hệ sinh thái',
             title: 'Công cụ cho tương lai.',
-            description: 'Một bộ ứng dụng liên kết được thiết kế để khuếch đại tiềm năng con người.',
+            description: 'Một hệ thống các ứng dụng tương hỗ, được tạo ra để tiếp thêm sức mạnh cho chính bạn.',
             items: {
                 superNeon: {
                     category: 'TIỆN ÍCH',
                     title: 'Super Neon',
-                    description: 'Tối ưu hóa thiết bị thông minh học hỏi thói quen sử dụng của bạn để giữ hiệu suất ở mức cao nhất.'
+                    description: 'Biến điện thoại thành bảng LED chuyên nghiệp. Tùy chỉnh font chữ, màu sắc và hiệu ứng ánh sáng.'
                 },
                 oneZip: {
                     category: 'DOANH NGHIỆP',
                     title: 'One Zip',
-                    description: 'Giải pháp nén và giải nén tập tin thông minh.'
+                    description: 'Đơn giản hóa quản lý tệp tin với công nghệ nén mạnh mẽ.'
                 },
                 collage: {
                     category: 'SÁNG TẠO',
                     title: 'Collage',
-                    description: 'Trình chỉnh sửa ảnh nghệ thuật hỗ trợ AI biến khoảnh khắc thành kiệt tác.'
+                    description: 'Khơi nguồn sáng tạo. Kể câu chuyện của bạn qua từng bức ảnh ghép.'
                 },
                 runTracker: {
                     category: 'SỨC KHỎE',
                     title: 'Run Tracker',
-                    description: 'Theo dõi sức khỏe và nhịp tim với phân tích sinh trắc học sâu.'
+                    description: 'Theo dõi chạy bộ với GPS chuẩn xác. Kiểm soát tốc độ, quãng đường và lượng calo tiêu thụ theo thời gian thực.'
                 },
                 pdf: {
                     category: 'DOANH NGHIỆP',
                     title: 'PDF',
-                    description: 'Công cụ xử lý tài liệu PDF toàn diện.'
+                    description: 'Số hóa cả thế giới trong tầm tay. Quét, đọc và ký tài liệu ở bất cứ đâu.'
                 },
                 arDraw: {
                     category: 'TRÒ CHƠI',
                     title: 'AR Draw',
-                    description: 'Trải nghiệm vẽ tranh thực tế ảo tăng cường độc đáo.'
+                    description: 'Học vẽ như chuyên gia nhờ công nghệ AR.'
                 }
             }
         },
         careers: {
             label: 'Tuyển dụng',
-            title: 'Tham gia cùng chúng tôi',
-            description: 'Chúng tôi đang tìm kiếm những người có tầm nhìn, những nghệ nhân và những người mơ mộng muốn định hình tương lai của tương tác kỹ thuật số.',
+            title: 'Đồng hành cùng 1Tabb',
+            description: 'Chúng tôi đang tìm kiếm những người có tầm nhìn, những người khao khát cùng nhau kiến tạo tương lai của tương tác số.',
             viewAll: 'Xem tất cả vị trí',
             culture: {
                 title: 'Văn hóa tại 1Tabb',
@@ -272,15 +272,15 @@ export const translations = {
             items: {
                 innovation: {
                     title: 'Đổi mới',
-                    description: 'Vượt qua mọi giới hạn với các giải pháp AI dự đoán nhu cầu người dùng trước khi chúng xuất hiện.'
+                    description: 'Phá vỡ mọi giới hạn với giải pháp AI có khả năng thấu hiểu nhu cầu trước khi bạn kịp nhận ra.'
                 },
                 quality: {
                     title: 'Chất lượng',
-                    description: 'Chú trọng tiểu tiết, giao diện hoàn hảo đến từng điểm ảnh và kiến trúc vững chắc.'
+                    description: 'Sự tỉ mỉ đến ám ảnh trong từng chi tiết, giao diện chuẩn xác đến từng pixel và nền tảng kiến trúc vững chắc.'
                 },
                 collaboration: {
                     title: 'Hợp tác',
-                    description: 'Xây dựng cầu nối giữa các lĩnh vực để tạo ra những sản phẩm toàn diện và ý nghĩa.'
+                    description: 'Kết nối các lĩnh vực chuyên biệt để tạo nên những sản phẩm toàn diện và có giá trị thực tiễn.'
                 }
             }
         },
